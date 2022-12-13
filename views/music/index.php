@@ -31,6 +31,7 @@ $Filter = $_GET['filter'];
 <?php 
 
 // На уровне Open -> Stream через Docker система не может отработать Exec;
+// Данный путь работает на хосте, такой же код есть и в UploadJob.php. Только для Docker-а
 
 $Codes = \FFMpeg\FFMpeg::create([
     'ffmpeg.binaries'  => 'A:/OSPanel/domains/task.l/bin/ffmpeg.exe', // the path to the FFMpeg binary
